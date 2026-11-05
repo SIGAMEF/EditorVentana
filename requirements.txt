@@ -1,0 +1,6 @@
+# Dependencias del motor local opcional (motor.py). El editor HTML no las necesita.
+rembg>=2.0.60
+onnxruntime>=1.17
+opencv-python-headless>=4.9
+numpy>=1.26
+pillow>=10.0

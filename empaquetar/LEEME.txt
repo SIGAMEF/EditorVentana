@@ -1,0 +1,14 @@
+EditorVentana - Mesa de Calco (version portable)
+Autor: DanielMarroquin
+
+1. Descomprime la carpeta completa donde quieras (USB, Escritorio...).
+2. Doble clic en EditorVentana.exe.
+   Se abre una ventana negra (el motor local) y el editor en tu navegador.
+3. Deja la ventana negra abierta mientras usas el editor. Cierrala para salir.
+
+No necesita instalar Python ni nada mas. El modelo para quitar fondos ya va
+incluido en la carpeta "modelos", asi que funciona sin internet.
+El motor solo escucha en este equipo (127.0.0.1:8765) y no envia tus imagenes a internet.
+
+Si Windows SmartScreen avisa "Windows protegio su PC": pulsa "Mas informacion"
+y luego "Ejecutar de todas formas" (el ejecutable no tiene certificado comercial).

@@ -1,0 +1,9 @@
+{
+  "name": "mesa-de-calco-pruebas",
+  "private": true,
+  "description": "Pruebas en navegador (Playwright + Chrome instalado). Uso: npm install, luego npm test (el motor debe estar iniciado para etapa4).",
+  "scripts": {
+    "test": "node regresion.js && node real.js && node etapa1.js && node etapa2.js && node etapa3.js && node extras.js && node etapa4.js"
+  },
+  "dependencies": { "playwright-core": "1.64.1", "pngjs": "7.0.0" }
+}

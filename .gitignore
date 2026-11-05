@@ -1,0 +1,14 @@
+# Entorno y modelo (se generan / descargan)
+.venv-motor/
+modelos/
+__pycache__/
+# Compilacion (el portable se publica en Releases)
+build/
+dist/
+*.spec
+# Datos reales y salidas de pruebas
+para_prueba.png
+pruebas/navegador/real.js
+pruebas/navegador/out/
+pruebas/navegador/node_modules/
+respaldo/
