@@ -6,7 +6,7 @@ Set-Location $raiz
 $py = Join-Path $raiz '.venv-motor\Scripts\python.exe'
 & $py -m pip install --disable-pip-version-check -q pyinstaller
 & $py -m PyInstaller --noconfirm --clean --onedir --console --name EditorVentana `
-    --version-file empaquetar\version_info.txt `
+    --version-file empaquetar\version_info.txt --icon empaquetar\icono.ico `
     --collect-all rembg --collect-all onnxruntime --collect-all pymatting `
     --collect-submodules skimage --collect-data skimage `
     --distpath dist --workpath build motor.py

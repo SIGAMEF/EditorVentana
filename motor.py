@@ -36,7 +36,7 @@ import traceback
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-VERSION = "1.0"
+VERSION = "1.0.1"
 CONGELADO = getattr(sys, "frozen", False)  # True dentro del ejecutable portable (PyInstaller)
 AQUI = Path(sys.executable).resolve().parent if CONGELADO else Path(__file__).resolve().parent
 HOST = "127.0.0.1"
