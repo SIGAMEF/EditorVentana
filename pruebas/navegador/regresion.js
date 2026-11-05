@@ -16,6 +16,8 @@ async function run(html) {
   // 2) captura + detectar cajas + varita de calco + flecha
   page.once('dialog', d => d.accept()); await page.click('#bNew');
   await page.setInputFiles('#fImg', U.CAP); await page.waitForTimeout(600);
+  // solo cajas, sin quitar nada de la captura: debe coincidir con la detección original
+  await page.evaluate(() => { const o = window.MesaDeCalco && window.MesaDeCalco.test && window.MesaDeCalco.test.detOpt; if (o) Object.assign(o, { buttons: false, text: false, lines: false, panels: false, lift: false }); });
   await page.click('.tool[data-tool="detect"]'); await page.waitForTimeout(300);
   out.detected = await page.evaluate(() => window.MesaDeCalco.doc.objs.map(o => [o.type, o.x, o.y, o.w, o.h].join(':')).join(' '));
   await page.click('.tool[data-tool="arrow"]');

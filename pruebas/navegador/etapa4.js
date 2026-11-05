@@ -102,6 +102,7 @@ function motorPid() { try { const l = execSync('netstat -ano').toString().split(
   const blocked = [];
   await L2.context.route('**/*', route => { const u = route.request().url(); if (u.startsWith('file:') || u.startsWith('data:') || u.startsWith('blob:')) return route.continue(); blocked.push(u); return route.abort('internetdisconnected'); });
   await p2.reload();
+  await p2.evaluate(() => Object.assign(window.MesaDeCalco.test.rtOpt, { pmode2: 'tapar', hmethod: 'filas' }));
   await U.openCapture(p2);
   page = p2;
   await U.tool(p2, 'rpatch');

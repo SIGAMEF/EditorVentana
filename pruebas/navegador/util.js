@@ -23,6 +23,8 @@ async function launch(opts = {}) {
   await page.goto(HTML);
   await page.evaluate(() => localStorage.clear());
   await page.reload();
+  // las suites antiguas prueban los modos clásicos (parche que tapa, relleno que prolonga líneas)
+  if (opts.legacy !== false) await page.evaluate(() => Object.assign(window.MesaDeCalco.test.rtOpt, { pmode2: 'tapar', hmethod: 'filas' }));
   return { browser, context, page, errors };
 }
 
